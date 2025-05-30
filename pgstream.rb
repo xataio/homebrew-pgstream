@@ -5,21 +5,21 @@
 class Pgstream < Formula
   desc "PostgreSQL replication with DDL changes"
   homepage "https://www.xata.io"
-  version "0.6.1"
+  version "0.6.2"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/xataio/pgstream/releases/download/v0.6.1/pgstream.macos.amd64"
-      sha256 "41c887aabab9ad822f4d4f2691c2b77335e5d9058b05e633d27bc03c9bea3aa9"
+      url "https://github.com/xataio/pgstream/releases/download/v0.6.2/pgstream.macos.amd64"
+      sha256 "db8ad7c2c2fc5274925f773cdc39a1ae536573de0950781ec79ec2b552269822"
 
       def install
         bin.install "pgstream.macos.amd64" => "pgstream"
       end
     end
     on_arm do
-      url "https://github.com/xataio/pgstream/releases/download/v0.6.1/pgstream.macos.arm64"
-      sha256 "b4865ffba52e7c56ba115d89f8b3a7d737a6f82bdceccfc3ceb5c6d8cb5e007a"
+      url "https://github.com/xataio/pgstream/releases/download/v0.6.2/pgstream.macos.arm64"
+      sha256 "98ca94382fb2130d44d2292ed68cc41124112a9731872ba38bb7bb8538587ce6"
 
       def install
         bin.install "pgstream.macos.arm64" => "pgstream"
@@ -30,8 +30,8 @@ class Pgstream < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xataio/pgstream/releases/download/v0.6.1/pgstream.linux.amd64"
-        sha256 "71224899cd8b6940f455c9087c6a483aca8d15eabf9b59989981aad539bcdb8a"
+        url "https://github.com/xataio/pgstream/releases/download/v0.6.2/pgstream.linux.amd64"
+        sha256 "7fd2672e090f25d2b1e32afe7285fdce95cd0c908f6b1ce7cc375c3835a9d958"
 
         def install
           bin.install "pgstream.linux.amd64" => "pgstream"
@@ -40,8 +40,8 @@ class Pgstream < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/xataio/pgstream/releases/download/v0.6.1/pgstream.linux.arm64"
-        sha256 "5164ed4dfc17e113eca975a60f05af1d9de4bf2b4c02eae7c69cd9521a0a8953"
+        url "https://github.com/xataio/pgstream/releases/download/v0.6.2/pgstream.linux.arm64"
+        sha256 "8e8c9e1f20f6ccd952f12ae5e24106e372385ee16757384edcb61b686499887c"
 
         def install
           bin.install "pgstream.linux.arm64" => "pgstream"
