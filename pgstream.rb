@@ -5,21 +5,21 @@
 class Pgstream < Formula
   desc "PostgreSQL replication with DDL changes"
   homepage "https://www.xata.io"
-  version "0.9.14"
+  version "1.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xataio/pgstream/releases/download/v0.9.14/pgstream.macos.amd64"
-      sha256 "dda353a084acece15a6adfc06ca6a9bd3c0b18152793d024151160c2e97c3f9b"
+      url "https://github.com/xataio/pgstream/releases/download/v1.1.1/pgstream.macos.amd64"
+      sha256 "a7da379548c33b719f5bd391970e0f11eebdb7caa52f8f1758e07981b28b8e69"
 
       define_method(:install) do
         bin.install "pgstream.macos.amd64" => "pgstream"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xataio/pgstream/releases/download/v0.9.14/pgstream.macos.arm64"
-      sha256 "8d685193c7c80d2bae9c6431b87b4ee3db6550e497d504e3fd483bdf1b73278c"
+      url "https://github.com/xataio/pgstream/releases/download/v1.1.1/pgstream.macos.arm64"
+      sha256 "a93a37037c615e250e019c993132c63a5dbe7f809766eed7436ee364fd942350"
 
       define_method(:install) do
         bin.install "pgstream.macos.arm64" => "pgstream"
@@ -29,15 +29,15 @@ class Pgstream < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xataio/pgstream/releases/download/v0.9.14/pgstream.linux.amd64"
-      sha256 "5c367ab8ed100301ada586a08baccb20abdc3dfa08386cfa5d864c118648529c"
+      url "https://github.com/xataio/pgstream/releases/download/v1.1.1/pgstream.linux.amd64"
+      sha256 "57fbe713b5f8a1209b3025f237e246777f44dfcf6d890f34e90c5e448c5e0314"
       define_method(:install) do
         bin.install "pgstream.linux.amd64" => "pgstream"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xataio/pgstream/releases/download/v0.9.14/pgstream.linux.arm64"
-      sha256 "e4570d2bf33dc4a32f228a1a6aa8ece27417a6df49d173fd85e5ce7fa1e4dadf"
+      url "https://github.com/xataio/pgstream/releases/download/v1.1.1/pgstream.linux.arm64"
+      sha256 "03b6b9b417c9e2b4430c2b97a67029a8094398c1c0a10cd41b01faba96b0e1bf"
       define_method(:install) do
         bin.install "pgstream.linux.arm64" => "pgstream"
       end
