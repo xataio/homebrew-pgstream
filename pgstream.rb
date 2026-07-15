@@ -11,7 +11,7 @@ class Pgstream < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xataio/pgstream/releases/download/v1.2.0/pgstream.macos.amd64"
-      sha256 "c0dd336a893e19692afb3af0184819c7414a688e6ad8159c0fa3d7f5f25864d0"
+      sha256 "16e008a83baad000d594e541281be1a63ff18a7d1b46359c7d38bdb7c44448df"
 
       define_method(:install) do
         bin.install "pgstream.macos.amd64" => "pgstream"
@@ -19,7 +19,7 @@ class Pgstream < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xataio/pgstream/releases/download/v1.2.0/pgstream.macos.arm64"
-      sha256 "b38378b69d4d2a5eed9a417cbf9a7ba8b79cf1fd88ac6a88ecffcc3d43ca6596"
+      sha256 "58376799d0dd99269e2e5c38f6e3e479a2be4112e3de0dbfa8b634348c55ed31"
 
       define_method(:install) do
         bin.install "pgstream.macos.arm64" => "pgstream"
@@ -30,14 +30,14 @@ class Pgstream < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/xataio/pgstream/releases/download/v1.2.0/pgstream.linux.amd64"
-      sha256 "c862694a4ee1bccbffe5eded7336decc4e00ac1de7388f1e798bac54038cff33"
+      sha256 "e356481466b0a78d68b30c9e2269fba1f37f73fa619b02d547942d693cd3fe58"
       define_method(:install) do
         bin.install "pgstream.linux.amd64" => "pgstream"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xataio/pgstream/releases/download/v1.2.0/pgstream.linux.arm64"
-      sha256 "c421361bebff0f816999f4f63b472710b1d635b1089557e3b0f7bc1f06d9094f"
+      sha256 "279f34892598cfb072b54619e68b17d9207d64be615726f6fe816ec782b135bf"
       define_method(:install) do
         bin.install "pgstream.linux.arm64" => "pgstream"
       end
